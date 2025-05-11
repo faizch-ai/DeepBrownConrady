@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use this code or dataset, please cite the following paper:"
+title: "Deep-BrownConrady: Prediction of Camera Calibration and Distortion Parameters Using Deep Learning and Synthetic Data"
+authors:
+  - given-names: Faiz Muhammad
+    family-names: Chaudhry
+    orcid: https://orcid.org/0009-0008-8921-924X
+  - given-names: Jarno
+    family-names: Ralli
+    orcid: https://orcid.org/0000-0001-7110-4294
+  - given-names: Jerome
+    family-names: Leudet
+    orcid: https://orcid.org/0009-0006-3135-9034
+  - given-names: Fahad
+    family-names: Sohrab
+    orcid: https://orcid.org/0000-0002-8080-4011
+  - given-names: Farhad
+    family-names: Pakdaman
+    orcid: https://orcid.org/0000-0001-6526-3811
+  - given-names: Pierre
+    family-names: Corbani
+    orcid: https://orcid.org/0009-0006-1478-9809
+  - given-names: Moncef
+    family-names: Gabbouj
+    orcid: https://orcid.org/0000-0002-9788-2323
+date-released: 2025-01-25
+version: "1.0"
+url: "https://arxiv.org/abs/2501.14510"
+repository-code: "https://github.com/faizch-ai/DeepBrownConrady"
+license: "MIT"
+type: software

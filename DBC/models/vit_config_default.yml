@@ -1,0 +1,8 @@
+# Default configuration file for ViT
+emb_dim: 384
+patch_size: 8
+depth: 6
+heads: 16
+mlp_dim: 2048
+dropout: 0.5
+emb_dropout: 0.1
