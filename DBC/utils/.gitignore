@@ -6,3 +6,4 @@ outputs/
 *.onnx
 *.h5
 *.lmdb/
+/__pycache__

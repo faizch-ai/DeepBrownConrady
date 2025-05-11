@@ -1,0 +1,4 @@
+Dataset: Kitti
+Total images: 560
+Total inference time: 32.04 seconds
+Average time per image: 0.0572 seconds

@@ -1,0 +1,10 @@
+# Optimizer parameters
+learning_rate: 0.001
+weight_decay: 0.01
+# MultiStepLR parameters
+milestones: [10]
+gamma: 0.1
+# Normalize the additional features using the maximum image_height and image_width.
+normalization:
+  max_image_height: 3840
+  max_image_width: 2160

@@ -2,10 +2,8 @@ import datetime
 import torch
 import os
 from DBC.models.vit import ViT
-from DBC.models import resnet50_scene as rs50_scene
 from DBC.models import resnet32 as rs32
 from DBC.models import resnet50 as rs50
-from DBC.models import resnet50_dropout as rs50_dropout
 from DBC.models import resnet50_extended_features as rs50_extended_features
 from torch.nn import Module
 from torch.optim import Optimizer
