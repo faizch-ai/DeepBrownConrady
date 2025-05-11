@@ -1,0 +1,8 @@
+data/
+runs/
+outputs/
+*.csv
+*.pth
+*.onnx
+*.h5
+*.lmdb/
