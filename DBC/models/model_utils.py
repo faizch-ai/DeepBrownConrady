@@ -1,12 +1,10 @@
 import datetime
 import torch
 import os
-from ailivesimml.models.vit import ViT
-from ailivesimml.models import resnet50_scene as rs50_scene
-from ailivesimml.models import resnet32 as rs32
-from ailivesimml.models import resnet50 as rs50
-from ailivesimml.models import resnet50_dropout as rs50_dropout
-from ailivesimml.models import resnet50_extended_features as rs50_extended_features
+from . import resnet32 as rs32
+from . import resnet50 as rs50
+from . import resnet50_extended_features as rs50_extended_features
+from . import vit
 from torch.nn import Module
 from torch.optim import Optimizer
 from torchvision import transforms
@@ -213,13 +211,6 @@ def get_model(
         return rs50_extended_features.ResNet(
             num_layers=layers, num_output=num_outputs, num_channels=num_channels, additional_features_dim=additional_features_dim
         ).to(device)
-
-    elif model_type == "resnet50_dropout":
-        layers = [3, 4, 6, 3]
-        return rs50_dropout.ResNet(
-            num_layers=layers, num_output=num_outputs, num_channels=num_channels, dropout_rate=dropout_rate
-        ).to(device)
-
     elif model_type == "vit":
         if image_size == 0:
             raise ValueError("Argument image_size expected")
@@ -227,15 +218,15 @@ def get_model(
         vit_parameters = load_model_configuration(model_configuration, model_type)
         vit_parameters.update({"image_size": image_size, "num_classes": num_outputs})
 
-        return ViT(**vit_parameters).to(device)
+        return vit.ViT(**vit_parameters).to(device)
 
     elif model_type == "vit_extended":
         if image_size == 0:
             raise ValueError("Argument image_size expected for vit_extended model.")
 
-        from ailivesimml.models.vit_extended import ViTExtended
+        from . import vit_extended
 
-        model = ViTExtended(
+        model = vit_extended.ViTExtended(
             image_size=image_size,
             patch_size=16,
             num_classes=num_outputs,
